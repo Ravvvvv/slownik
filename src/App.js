@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import DictionaryApp from "./components/DictionaryApp";
+import "./App.css";
 
-function App() {
+const dictionaryData = {
+  // Przykładowe definicje słów
+  "apple": "A fruit that grows on trees and is often red or green.",
+  "computer": "An electronic device for storing and processing data.",
+  // Dodaj więcej definicji tutaj
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <DictionaryApp dictionaryData={dictionaryData} />
     </div>
   );
-}
+};
 
 export default App;
